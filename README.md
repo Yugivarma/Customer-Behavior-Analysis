@@ -1,138 +1,122 @@
-📊 Customer Shopping Behavior Analysis
-🔎 Overview
+
+
+---
+
+# 📊 Customer Shopping Behavior Analysis
+
+## 🔎 Overview
 
 This project analyzes customer shopping behavior for a retail company to identify trends, improve customer engagement, and optimize marketing and product strategies.
 
-Using Python, PostgreSQL, and Power BI, the project explores transactional data from 3,900 customer purchases to uncover insights into spending patterns, customer segmentation, subscription behavior, and purchase drivers. 
+Using **Python, PostgreSQL, and Power BI**, the project explores transactional data from **3,900 customer purchases** to uncover insights into spending patterns, customer segmentation, subscription behavior, and key purchase drivers.
 
+The objective is to transform raw consumer data into **actionable business insights** that support data-driven decision-making.
 
-The end goal is to transform raw consumer data into actionable business insights that support data-driven decision-making.
+---
 
-📁 Dataset
+## 📁 Dataset
 
-Total Records: 3,900 transactions
+* **Total Records:** 3,900 transactions
+* **Total Columns:** 18 features
 
-Total Columns: 18 features 
+### Key Attributes:
 
-Key Attributes:
+* **Customer Demographics:** Age, Gender, Location, Subscription Status
 
-Customer Demographics (Age, Gender, Location, Subscription Status)
+* **Purchase Details:** Category, Item Purchased, Purchase Amount, Season
 
-Purchase Details (Category, Item Purchased, Purchase Amount, Season)
+* **Behavioral Data:** Discount Applied, Review Rating, Shipping Type, Previous Purchases
 
-Behavioral Data (Discount Applied, Review Rating, Shipping Type, Previous Purchases)
-
-Missing Values: 37 missing values in the Review Rating column. 
+* **Missing Values:** 37 missing values in the *Review Rating* column
 
 The dataset enables analysis of revenue trends, customer loyalty, discount effectiveness, and demographic patterns.
 
-🛠 Tools & Technologies
+---
 
-Python (Pandas, NumPy, Matplotlib, Seaborn)
+## 🛠 Tools & Technologies
 
-PostgreSQL
+* **Python** (Pandas, NumPy, Matplotlib, Seaborn)
+* **PostgreSQL**
+* **SQL (Business Queries & Aggregations)**
+* **Power BI**
+* **Jupyter Notebook / Anaconda**
+* **Git & GitHub**
 
-SQL (Business Queries)
+---
 
-Power BI
+## 🔄 Project Workflow
 
-Jupyter Notebook / Anaconda
+### 1️⃣ Data Preparation & Cleaning (Python)
 
-Git & GitHub
+* Loaded dataset using Pandas
+* Performed structure and summary checks (`df.info()`, `describe()`)
+* Handled missing values in *Review Rating* using category-based median imputation
+* Standardized column names to snake_case format
+* Created new features:
 
-🔄 Project Steps
-1️⃣ Data Preparation & Cleaning (Python)
+  * `age_group`
+  * Customer segments (New, Returning, Loyal)
+* Removed redundant fields (e.g., `promo_code_used`)
+* Loaded cleaned data into PostgreSQL
 
-Loaded dataset using Pandas
+---
 
-Performed structure and summary checks (df.info(), describe())
+### 2️⃣ Data Analysis (SQL – PostgreSQL)
 
-Handled missing values in Review Rating using category-based median imputation
+SQL queries were written to answer key business questions:
 
-Standardized column names (snake_case format)
+* Revenue by Gender
+* High-Spending Discount Users
+* Top 5 Products by Rating
+* Shipping Type Comparison
+* Subscribers vs Non-Subscribers
+* Discount-Dependent Products
+* Customer Segmentation
+* Revenue by Age Group
 
-Created new features:
+Window functions, aggregations, filtering, and segmentation logic were applied to simulate real-world business analytics scenarios.
 
-age_group
+---
 
-Customer segments (New, Returning, Loyal)
+## 📊 Power BI Dashboard
 
-Removed redundant fields (e.g., promo_code_used) 
+An interactive Power BI dashboard was developed to present insights visually.
 
-Customer Shopping Behavior Anal…
+### Key Dashboard KPIs:
 
-Loaded cleaned data into PostgreSQL
+* Total Customers (3.9K)
+* Average Purchase Amount
+* Average Review Rating
+* Revenue by Category
+* Revenue by Age Group
+* Subscription Distribution
+* Sales by Category
 
-2️⃣ Data Analysis (SQL – PostgreSQL)
+The dashboard supports dynamic filtering by:
 
-Structured SQL queries were written to answer key business questions:
+* Subscription Status
+* Gender
+* Category
+* Shipping Type
 
-Revenue by Gender
+---
 
-High-Spending Discount Users
+## 📈 Key Results & Insights
 
-Top 5 Products by Rating
+* Certain age groups contributed significantly higher revenue.
+* Subscription customers showed strong overall revenue contribution.
+* Discount-heavy products experienced higher purchase frequency.
+* Express shipping users had slightly higher average spending.
+* Loyal customers represented the largest customer segment.
 
-Shipping Type Comparison
+---
 
-Subscribers vs Non-Subscribers
+## 💡 Business Recommendations
 
-Discount-Dependent Products
+* Promote subscription benefits to increase recurring revenue
+* Reward repeat buyers through structured loyalty programs
+* Optimize discount strategies to balance sales and margins
+* Highlight top-rated and best-selling products in marketing campaigns
 
-Customer Segmentation
+---
 
-Revenue by Age Group 
-
-Window functions, aggregation, filtering, and segmentation logic were applied to simulate real business analytics scenarios.
-
-📊 Power BI Dashboard
-
-An interactive Power BI dashboard was built to visualize key insights. 
-
-Key Dashboard KPIs:
-
-Total Customers (3.9K)
-
-Average Purchase Amount
-
-Average Review Rating
-
-Revenue by Category
-
-Revenue by Age Group
-
-Subscription Distribution
-
-Sales by Category
-
-The dashboard enables dynamic filtering by:
-
-Subscription Status
-
-Gender
-
-Category
-
-Shipping Type
-
-📈 Key Results & Insights
-
-Certain age groups contributed higher revenue than others.
-
-Subscription customers showed strong revenue contribution.
-
-Discount-heavy products had higher purchase frequency.
-
-Express shipping users had slightly higher average spending.
-
-Loyal customers represented the largest segment. 
-
-Business Recommendations:
-
-Promote subscription benefits
-
-Reward repeat buyers with loyalty programs
-
-Optimize discount strategies
-
-Highlight top-rated products in marketing campaigns 
